@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<view icon="100674706" title="ACE Admin" width="620" height="400">
+  <control progid="DecalControls.FixedLayout" clipped="">
+
+    <control progid="DecalControls.Notebook" name="nbMain" left="0" top="4" width ="600" height="400">
+
+
+      <page label="Main">
+        <control progid="DecalControls.FixedLayout" clipped="">
+          <control progid="DecalControls.PushButton" name="ServerStatusBtn" left="2" top="4" width="90" height="16" text="Server Status" />
+          <control progid="DecalControls.PushButton" name="ListPlayersBtn" left="2" top="22" width="90" height="16" text="List Players" />
+          <control progid="DecalControls.Checkbox" name="AttackableCheckBox" left="112" top="22" width="90" height="16" checked="false" text="Attackable"/>
+          <control progid="DecalControls.PushButton" name="BuffSelfBtn" left="204" top="22" width="90" height="16" text="Buff Self" />
+          <control progid="DecalControls.PushButton" name="RunSelfBtn" left="300" top="22" width="90" height="16" text="Run" />
+          <control progid="DecalControls.PushButton" name="HealSelfBtn" left="112" top="40" width="90" height="16" text="Heal Self" />
+          
+          <control progid="DecalControls.StaticText" name="SelectedText" left="4" top="60" width="300" height="16" textcolor="8438015" text="..."/>
+          <control progid="DecalControls.PushButton" name="TestBtn" left="2" top="80" width="90" height="16" text="Test button" />
+          
+        </control>
+      </page>
+
+      <page label="POI">
+        <control progid="DecalControls.FixedLayout" clipped="">
+          <control progid="DecalControls.List" name="PoiListBox" left="4" top="22" width="220" height="200">
+            <column progid="DecalControls.IconColumn" name="PoiListBoxIcon" fixedwidth="20" />
+            <column progid="DecalControls.TextColumn" name="PoiListBoxColA" fixedwidth="200" />
+          </control>
+          <control progid="DecalControls.PushButton" name="PoiRefreshBtn" left="2" top="228" width="100" height="16" text="Refresh" />
+        </control>
+      </page>
+
+      <page label="Player">
+        <control progid="DecalControls.FixedLayout" clipped="">
+          <control progid="DecalControls.PushButton" name="GetLoggedOnPlayerListBtn" left="2" top="4" width="140" height="16" text="List Logged on Players" />
+          <control progid="DecalControls.PushButton" name="GetAllPlayerListBtn" left="148" top="4" width="140" height="16" text="List All Players" />
+          <control progid="DecalControls.StaticText" name="PlayerCountText" left="4" top="22" width="300" height="16" textcolor="8438015" text="..."/>
+          
+          <control progid="DecalControls.List" name="PlayersListBox" left="4" top="40" width="338" height="200">
+            <column progid="DecalControls.TextColumn" name="PlayersListBoxColA" fixedwidth="150" />
+            <column progid="DecalControls.TextColumn" name="PlayersListBoxColB" fixedwidth="55" />
+            <column progid="DecalControls.TextColumn" name="PlayersListBoxColC" fixedwidth="120" />
+          </control>
+
+          <control progid="DecalControls.StaticText" name="SelectPlayerInfoStaticText" left="4" top="242" width="300" height="16" textcolor="8438015" text="Enter Player name or select from above."/>
+          <control progid="DecalControls.StaticText" name="SelectPlayerNameLable" left="4" top="260" width="72" height="16" text="Player Name:"/>
+          <control progid="DecalControls.Edit" name="SelectedPlayerEdit" left="76" top="260" width="248" height="16" textcolor="8438015" text=""/>
+
+          <control progid="DecalControls.PushButton" name="TeleToPlayerBtn" left="2" top="280" width="105" height="16" text="Teleport To" />
+          <control progid="DecalControls.PushButton" name="BuffPlayerBtn" left="109" top="280" width="105" height="16" text="Buff" />
+          <control progid="DecalControls.PushButton" name="BuffTargetBtn" left="216" top="280" width="105" height="16" text="Buff Target" />
+
+          <control progid="DecalControls.PushButton" name="FellowBuffPlayerBtn" left="109" top="298" width="105" height="16" text="Fellow Buff" />
+          <control progid="DecalControls.PushButton" name="FellowBuffTargetBtn" left="216" top="298" width="105" height="16" text="Fellow Buff Target" />
+
+        </control>
+      </page>
+
+      <page label="Account">
+        <control progid="DecalControls.FixedLayout" clipped="">
+          <control progid="DecalControls.StaticText" name="NewAccountStaticText" left="2" top="4" width="250" height="16" text="Create New Account:"/>
+          <control progid="DecalControls.StaticText" name="NewAccountNameLabel" left="4" top="22" width="30" height="16" text="Name:"/>
+          <control progid="DecalControls.Edit" name="NewAccountNameEdit" left="56" top="22" width="144" height="16" text=""/>
+          <control progid="DecalControls.StaticText" name="NewAccountAccessLevelLabel" left="204" top="22" width="86" height="16" text="Access Level:"/>
+          <control progid="DecalControls.Choice" name="NewAccountAccessLevelChoice" left="276" top="22" width="72" height="16" selected="0">
+            <option text="Player" data="0"/>
+            <option text="Advocate" data="1"/>
+            <option text="Sentinel" data="2"/>
+            <option text="Envoy" data="3"/>
+            <option text="Developer" data="4"/>
+            <option text="Admin" data="5"/>
+          </control>
+
+          <control progid="DecalControls.StaticText" name="NewAccountPasswordLabel" left="4" top="40" width="50" height="16" text="Password:"/>
+          <control progid="DecalControls.Edit" name="NewAccountPasswordEdit" left="56" top="40" width="144" height="16" text=""/>
+          <control progid="DecalControls.PushButton" name="NewAccountCreateBtn" left="204" top="40" width="80" height="16" text="Create" />
+
+
+
+          <control progid="DecalControls.PushButton" name="GetAccountListBtn" left="2" top="104" width="100" height="16" text="Get Accounts" />
+          <control progid="DecalControls.StaticText" name="AccountCountText" left="112" top="104" width="300" height="16" textcolor="8438015" text="..."/>
+          <control progid="DecalControls.List" name="AccountListBox" left="106" top="122" width="318" height="200">
+            <column progid="DecalControls.TextColumn" name="AccountListBoxColA" fixedwidth="100" />
+            <column progid="DecalControls.TextColumn" name="AccountListBoxColB" fixedwidth="100" />
+          </control>
+          <control progid="DecalControls.StaticText" name="AccountPlayerText" left="150" top="224" width="100" height="16" textcolor="8438015" text="..."/>
+
+        </control>
+      </page>
+
+
+
+    </control>
+  </control>
+</view>
